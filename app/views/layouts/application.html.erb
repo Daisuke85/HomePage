@@ -7,39 +7,13 @@
                                'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application',
                                'data-turbolinks-track': 'reload' %>
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Natural Gururd", '#', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "About"  , about_path %></li>
-            <li><%= link_to "Contact",   contact_path %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
     </div>
-
-    <footer class="footer">
-      <small>
-        The <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-        by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
-      </small>
-      <nav>
-        <ul>
-          <li><%= link_to "About",   about_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
-          <li><a href="http://news.railstutorial.org/">News</a></li>
-        </ul>
-      </nav>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -54,4 +54,6 @@ group :production do
     gem 'mysql2'
 end
 
+# 追加したgem
 gem 'bootstrap-sass', '3.3.7'
+gem 'jquery-rails'
