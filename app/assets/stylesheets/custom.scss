@@ -55,21 +55,22 @@ p {
 
 
 /* header */
+.navbar{
+  background-color: #333230;
+  .navbar-header{
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
+  }
+
+  .navbar-brand{
+    background: url("header_logo.png") no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    width: 300px;
+    margin-top: 0;
+    margin-left: 5px;
   }
 }
+
 
 /* footer */
 
