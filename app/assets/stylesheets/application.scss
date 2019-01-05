@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: font-url('Montserrat-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: font-url('Montserrat-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
