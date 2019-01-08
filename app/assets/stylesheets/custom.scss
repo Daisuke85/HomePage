@@ -49,7 +49,8 @@ font-weight: 700;
 }
 
 .btn-primary {
-font-family: ToppanBunkyuMidashiGothicStdN-ExtraBold;
+font-weight:900;
+font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
 background-color: #27bb5a;
 border-color:  #27bb5a;
   &:hover {
@@ -66,26 +67,47 @@ color: #27bb5a;
   }
 }
 
+@media screen and (min-width: 480px) {
+	.br-sp { display:none; }
+}
+
 
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: ToppanBunkyuMidashiGothicStdN-ExtraBold;
+  font-weight: 900;
+  font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
   margin:0;
+  //スマホサイズ
+  @media (min-width: 480px) {
+    font-size: 3.5em;
+  }
+  //PCサイズ
+  @media (min-width: 768px) {
+    font-size: 4em;
+  }
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.5em;
   letter-spacing: -1px;
   text-align: center;
   font-weight: normal;
   color: $gray-light;
+  //スマホサイズ
+  @media (min-width: 480px) {
+    font-size: 3.5em;
+  }
+  //PCサイズ
+  @media (min-width: 768px) {
+    font-size: 4em;
+  }
 }
 
 p {
@@ -97,13 +119,13 @@ p {
 color: #494f55!important;
 }
 
+
 /* header */
 .navbar{
   background-color: #21232a;
   position: relative;
   margin-bottom: 0;
-  font-family: Montserrat-Regular;
-  font-size: 1.1em;
+  font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
   letter-spacing: 0.05em;
   #navbar a{
     color:#fff;
@@ -153,69 +175,69 @@ color: #494f55!important;
     bottom: 0;
     left: 0;
   }
-  h2{
+  .intro_message{
     color:white;
-    font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
     margin-bottom: 0;
     line-height: 1.7em;
   }
-  h1{
-    .mokuzai{
+  .intro_title{
+    font-size: 3em;
+    .sub_title{
       font-size:0.45em;
-      font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
     }
-    .gurad{
-      letter-spacing: -2.5px;
-
-      .de{
-        font-size:0.9em;
-      }
+    .main_title{
+      font-weight: 900;
+      font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
     }
     margin-bottom:35px;
     line-height: 1em;
   }
-}
 
+  //タブレットサイズ
+  @media (min-width: 480px) {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    .intro_message{
+      font-size: 1.5em;
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+    .intro_title{
+      font-size: 3.8em;
+      margin-bottom:70px;
+    }
 
+  }
+  //PCサイズ
 @media (min-width: 768px) {
-  .intro-text {
     padding-top: 300px;
     padding-bottom: 300px;
-    h2{
+    .intro_message{
       font-size: 2.5em;
       padding-top: 50px;
       padding-bottom: 30px;
     }
-    h1{
+    .intro_title{
       font-size:5em;
       margin-bottom:70px;
     }
   }
 }
-
 //SERVISES
-
-
-
 section{
-  padding: 100px 0;
-
-  @media (min-width: 768px){
-    padding: 150px 0;
-  }
+  padding: 80px 0;
 
   .section-heading {
     font-weight: 900;
-    font-family:"Montserrat-Bold";
-    font-size: 40px;
+    font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
     margin-top: 0;
     margin-bottom: 20px;
     color:#212529;
     letter-spacing: 1px;
     .toha{
-      font-size: 0.8em;
+      font-size: 0.7em;
       font-weight: 300;
     }
   }
@@ -225,8 +247,19 @@ section{
     font-weight: 200;
     margin-bottom: 75px;
     text-transform: none;
-    line-height: 2em;
+    line-height: 1.7em;
     font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    .section_text{
+      padding:7px 0;
+    }
+  }
+
+  //スマホサイズ
+  @media (min-width: 480px) {
+    padding: 100px 0;
+  }
+  //PCサイズ
+  @media (min-width: 768px) {
   }
 }
 
