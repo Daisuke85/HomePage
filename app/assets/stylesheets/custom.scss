@@ -12,6 +12,7 @@ margin: 0;
 color: #212529;
 text-align: left;
 background-color: #fff;
+font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
 }
 
 section {
@@ -48,13 +49,21 @@ font-weight: 700;
 }
 
 .btn-primary {
+font-family: ToppanBunkyuMidashiGothicStdN-ExtraBold;
 background-color: #27bb5a;
 border-color:  #27bb5a;
+  &:hover {
+    background-color:  #21a64f!important;
+    border-color: #21a64f!important;
+    }
 }
 
-.btn-primary:hover {
-background-color:  #21a64f!important;
-border-color: #21a64f!important;
+a {
+color: #27bb5a;
+  &:hover {
+    color:#21a64f;
+    text-decoration: underline;
+  }
 }
 
 
@@ -62,6 +71,7 @@ border-color: #21a64f!important;
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  font-family: ToppanBunkyuMidashiGothicStdN-ExtraBold;
 }
 
 h1 {
@@ -83,12 +93,24 @@ p {
   line-height: 1.7em;
 }
 
+.text-muted {
+color: #494f55!important;
+}
+
 /* header */
 .navbar{
-  background-color: #343741;
+  background-color: #21232a;
   position: relative;
   margin-bottom: 0;
-
+  font-family: Montserrat-Regular;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  #navbar a{
+    color:#fff;
+    &:hover {
+      color:#27bb5a;
+      }
+  }
   .navbar-brand{
     background: url("/images/header_logo.png") no-repeat left center;
     background-size: contain;
@@ -103,7 +125,7 @@ p {
 
 .intro-text {
   text-align: center;
-  background-image:url("/images/img_3.jpg");
+  background-image:url("/images/intro_img.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -153,8 +175,6 @@ p {
     }
     margin-bottom:35px;
     line-height: 1em;
-    font-family: ToppanBunkyuMidashiGothicStdN-ExtraBold;
-
   }
 }
 
@@ -172,6 +192,41 @@ p {
       font-size:5em;
       margin-bottom:70px;
     }
+  }
+}
+
+//SERVISES
+
+
+
+section{
+  padding: 100px 0;
+
+  @media (min-width: 768px){
+    padding: 150px 0;
+  }
+
+  .section-heading {
+    font-weight: 900;
+    font-family:"Montserrat-Bold";
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color:#212529;
+    letter-spacing: 1px;
+    .toha{
+      font-size: 0.8em;
+      font-weight: 300;
+    }
+  }
+
+  .section-subheading{
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 75px;
+    text-transform: none;
+    line-height: 2em;
+    font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
   }
 }
 
