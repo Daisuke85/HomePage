@@ -65,16 +65,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+  font-size: 3.5em;
   text-align: center;
+  margin:0;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: $gray-light;
@@ -85,15 +83,11 @@ p {
   line-height: 1.7em;
 }
 
-
-
-
 /* header */
 .navbar{
   background-color: #343741;
-  .navbar-header{
-
-  }
+  position: relative;
+  margin-bottom: 0;
 
   .navbar-brand{
     background: url("/images/header_logo.png") no-repeat left center;
@@ -109,7 +103,7 @@ p {
 
 .intro-text {
   text-align: center;
-  background-image:url("/images/1.jpg");
+  background-image:url("/images/img_3.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -117,14 +111,67 @@ p {
   display: block;
   color: #fff;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 220px;
+  position:relative;
+    &::before {
+    /* 透過した黒を上から重ねるイメージ */
+      background-color: rgba(0,0,0,0.4);
+      /* 自由に位置指定 */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: ' ';
+    }
+  .container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  h2{
+    color:white;
+    font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    line-height: 1.7em;
+  }
+  h1{
+    .mokuzai{
+      font-size:0.45em;
+      font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    }
+    .gurad{
+      letter-spacing: -2.5px;
+
+      .de{
+        font-size:0.9em;
+      }
+    }
+    margin-bottom:35px;
+    line-height: 1em;
+    font-family: ToppanBunkyuMidashiGothicStdN-ExtraBold;
+
+  }
 }
 
 
 @media (min-width: 768px) {
   .intro-text {
     padding-top: 300px;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
+    h2{
+      font-size: 2.5em;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+    h1{
+      font-size:5em;
+      margin-bottom:70px;
+    }
   }
 }
 
