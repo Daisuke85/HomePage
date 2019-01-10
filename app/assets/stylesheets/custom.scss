@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+.my-green {color: #27bb5a}
 
 /* universal */
 
@@ -17,6 +18,10 @@ font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "Ｍ�
 
 section {
   overflow: auto;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+display: block;
 }
 
 textarea {
@@ -235,13 +240,13 @@ color: #494f55!important;
 }
 //SERVISES
 section{
-  padding: 80px 0;
+  padding: 150px 0;
 
   .section-heading {
     font-weight: 900;
     font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color:#212529;
     letter-spacing: 1px;
     .toha{
@@ -262,6 +267,10 @@ section{
     }
   }
 
+  .col-sm-4{
+    padding-bottom: 50px
+  }
+
   .service-heading {
     margin: 15px 0;
     text-transform: none;
@@ -271,13 +280,24 @@ section{
   }
 
   //スマホサイズ
-  @media (min-width: 480px) {
+  @media (max-width:   480px) {
     padding: 100px 0;
   }
-  //PCサイズ
+  //タブレットサイズ
   @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+
+    }
+  }
+
+  @media (min-width: 992px){
+    .container {
+      max-width: 960px;
+    }
   }
 }
+
 
 
 /* footer */
