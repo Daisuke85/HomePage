@@ -71,6 +71,14 @@ color: #27bb5a;
 	.br-sp { display:none; }
 }
 
+.fa-stack {
+display: inline-block;
+height: 2em;
+line-height: 2em;
+position: relative;
+vertical-align: middle;
+width: 2.5em;
+}
 
 /* typography */
 
@@ -212,16 +220,16 @@ color: #494f55!important;
   }
   //PCサイズ
 @media (min-width: 768px) {
-    padding-top: 300px;
-    padding-bottom: 300px;
+    padding-top: 400px;
+    padding-bottom: 350px;
     .intro_message{
       font-size: 2.5em;
-      padding-top: 50px;
-      padding-bottom: 30px;
+      padding-top: 150px;
+      padding-bottom: 50px;
     }
     .intro_title{
-      font-size:5em;
-      margin-bottom:70px;
+      font-size:5.5em;
+      margin-bottom:80px;
     }
   }
 }
@@ -252,6 +260,14 @@ section{
     .section_text{
       padding:7px 0;
     }
+  }
+
+  .service-heading {
+    margin: 15px 0;
+    text-transform: none;
+  }
+  .text-muted {
+    color: #6c757d!important;
   }
 
   //スマホサイズ
