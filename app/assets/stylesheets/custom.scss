@@ -4,9 +4,8 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
-.my-green {
-  color: #27bb5a;
-}
+
+
 
 /* universal */
 
@@ -72,6 +71,10 @@ color: #27bb5a;
     color:#21a64f;
     text-decoration: underline;
   }
+}
+
+.fa-circle{
+  color:#27bb5a;
 }
 
 @media screen and (min-width: 480px) {
