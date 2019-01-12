@@ -5,8 +5,6 @@
 
 $gray-medium-light: #eaeaea;
 
-
-
 /* universal */
 
 body {
@@ -14,7 +12,9 @@ margin: 0;
 color: #212529;
 text-align: left;
 background-color: #fff;
-font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+/* 追加 */
+transform: rotate(.03deg);
 }
 
 section {
@@ -262,11 +262,13 @@ section{
 
   .section-subheading{
     font-size: 16px;
-    font-weight: 200;
+    font-weight: normal;
     margin-bottom: 75px;
     text-transform: none;
     line-height: 1.7em;
-    font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    /* 追加 */
+    transform: rotate(.03deg);
     .section_text{
       padding:7px 0;
     }
@@ -303,12 +305,73 @@ section{
   }
 }
 
+//Contact
+section#contact {
+  background-color: #f7f7f7;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top:80px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+  .section-heading{
+    font-size: 40px;
+    padding-top:0;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .section-subheading {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    line-height:2em;
+    text-transform: none;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-control {
+    padding: 20px;
+    &:focus {
+      border-color: #27bb5a;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .form-group textarea.form-control {
+    height: 310px;
+  }
+
+
+  @media (max-width:   480px) {
+    padding: 100px 0;
+  }
+  //タブレットサイズ
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  //PCサイズ
+  @media (min-width: 992px){
+    .container {
+      max-width: 960px;
+      .section-subheading {
+        .ex_br{
+          display:none;
+        }
+      }
+    }
+  }
+}
 
 
 /* footer */
 
 footer {
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
