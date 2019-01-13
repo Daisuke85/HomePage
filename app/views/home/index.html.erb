@@ -1,4 +1,16 @@
 <% provide(:title, "岩手 シロアリ対策処理 ボロンdeガード") %>
+
+<% if @inquiry.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <strong>入力内容にエラーがあります</strong>
+    <ul>
+      <% @inquiry.errors.each do |attr, msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
   <div class="intro-text">
     <div class="container">
       <div class="intro_message">
@@ -20,7 +32,7 @@
     </div>
   </div>
 
-<section id="products">
+<section id="product">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -75,34 +87,34 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <%= form_for @inquiry, :url => home_confirm_path , :name => "sentMessage",:id =>"contactForm"  do |f| %>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="お名前 *必須" required="required" data-validation-required-message="Please enter your name.">
+                    <%= f.text_field :name ,:class => 'form-control', :id => 'name' , :placeholder=> 'お名前 *必須'%>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="kana" type="text" placeholder="フリガナ" data-validation-required-message="Please enter your name.">
+                    <%= f.text_field :kana ,:class => 'form-control', :id => 'kana' , :placeholder=> 'フリガナ'%>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="メールアドレス *必須*" required="required" data-validation-required-message="Please enter your email address.">
+                    <%= f.text_field :email,:class => 'form-control', :id => 'email' , :placeholder=> 'メールアドレス *必須'%>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="電話番号 *必須" required="required" data-validation-required-message="Please enter your phone number.">
+                    <%= f.text_field :phone ,:class => 'form-control', :id => 'phone' , :placeholder=> '電話番号 *必須'%>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="address" type="text" placeholder="住所" data-validation-required-message="Please enter your phone number.">
+                    <%= f.text_field :address ,:class => 'form-control', :id => 'address' , :placeholder=> '住所'%>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="お問い合わせ内容 *必須" required="required" data-validation-required-message="Please enter a message."></textarea>
+                    <%= f.text_area :message ,:class => 'form-control', :id => 'message' , :placeholder=> 'お問い合わせ内容 *必須'%>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -112,7 +124,7 @@
                   <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">送信</button>
                 </div>
               </div>
-            </form>
+            <% end %>
           </div>
         </div>
       </div>
