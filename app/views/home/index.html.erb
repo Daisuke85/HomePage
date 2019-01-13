@@ -87,7 +87,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <%= form_for @inquiry, :url => home_confirm_path , :name => "sentMessage",:id =>"contactForm"  do |f| %>
+            <%= form_for @inquiry, url:home_confirm_path , :name => "sentMessage",:id =>"contactForm"  do |f| %>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -121,7 +121,7 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">送信</button>
+                   <%= f.submit '確認', class: 'btn btn-xl btn-primary' ,:id => "sendMessageButton"%>
                 </div>
               </div>
             <% end %>
