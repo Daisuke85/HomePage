@@ -10,20 +10,17 @@ class HomeController < ApplicationController
    @inquiry = Inquiry.new(inquiry_params)
    if @inquiry.valid?
      # OK。確認画面を表示
-     render :action => 'thanks'
+     # メール送信
+     @inquiry = Inquiry.new(inquiry_params)
+     InquiryMailer.received_email(@inquiry).deliver
+
+     # ホームへ戻る
+     redirect_to root_path
+
    else
      # NG。入力画面を再表示
      render :action => 'index'
    end
- end
-
- def thanks
-   # メール送信
-   @inquiry = Inquiry.new(params[:inquiry])
-   InquiryMailer.received_email(@inquiry).deliver
-
-   # 完了画面を表示
-   render :action => 'thanks'
  end
 
  private
