@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>naturalguard.jpにお問い合わせがありました。</h1>
+    <p>■送信時刻<br>
+    <%= @inquiry.created_at %></p>
+    <p>■お名前<br>
+    <%= @inquiry.name %></p>
+    <p>■フリガナ<br>
+    <%= @inquiry.kana %></p>
+    <p>■メールアドレス<br>
+     <%= @inquiry.email %></p>
+    <p>■電話番号<br>
+     <%= @inquiry.phone %></p>
+    <p>■住所<br>
+     <%= @inquiry.address %></p>
+    <p  style="margin-bottom:30px;">■お問い合わせ内容<br>
+     <%= @inquiry.message %> </p>
+
+    <p>以上です。</p>
+
+  </body>
+</html>

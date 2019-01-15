@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  def index
+ def index
    # 入力画面を表示
    @inquiry = Inquiry.new
  end
@@ -12,10 +12,10 @@ class HomeController < ApplicationController
      # OK。確認画面を表示
      # メール送信
      @inquiry = Inquiry.new(inquiry_params)
-     InquiryMailer.received_email(@inquiry).deliver
-
+     @inquiry.save
+     InquiryMailer.send_mail(@inquiry).deliver_now
      # ホームへ戻る
-     redirect_to root_path
+     redirect_to root_path, notice: '送信が完了しました！',:anchor=>'header_id'
 
    else
      # NG。入力画面を再表示
@@ -26,7 +26,7 @@ class HomeController < ApplicationController
  private
 
  def inquiry_params
-    params.require(:inquiry).permit(:name,:content,:email,:adress,:message,:phone,:kana)
+    params.require(:inquiry).permit(:name,:content,:email,:address,:message,:phone,:kana)
   end
 
 end

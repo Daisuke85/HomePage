@@ -1,13 +1,8 @@
 <% provide(:title, "岩手 シロアリ対策処理 ボロンdeガード") %>
-<div id="wrapper">
-<% if @inquiry.errors.any? %>
-  <div class="alert alert-danger" role="alert">
-    <strong>入力内容にエラーがあります</strong>
-    <ul>
-      <% @inquiry.errors.each do |attr, msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-success" role="alert">
+    <%= content_tag(:div, value, class: "#{key}") %>
   </div>
 <% end %>
 
@@ -85,9 +80,19 @@
               以下項目を全てご入力いただき、個人情報保護方針に同意の上、<br class="ex_br">内容を送信してください。<br>
           </div>
         </div>
+        <% if @inquiry.errors.any? %>
+          <div class="alert alert-danger" role="alert">
+            <strong>入力内容にエラーがあります！</strong>
+            <ul>
+              <% @inquiry.errors.each do |attr, msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
         <div class="row">
           <div class="col-lg-12">
-            <%= form_for @inquiry, url:home_confirm_path , :name => "sentMessage",:id =>"contactForm"  do |f| %>
+            <%= form_for @inquiry, url:root_path , :name => "sentMessage",:id =>"contactForm"  do |f| %>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -121,7 +126,7 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                   <%= f.submit '確認', class: 'btn btn-xl btn-primary' ,:id => "sendMessageButton"%>
+                   <%= f.submit '送信', class: 'btn btn-xl btn-primary' ,:id => "sendMessageButton"%>
                 </div>
               </div>
             <% end %>
@@ -129,4 +134,3 @@
         </div>
       </div>
     </section>
-</div>

@@ -1,11 +1,13 @@
 
 class InquiryMailer < ActionMailer::Base
-  default from: "example@example.com"   # 送信元アドレス
-  default to: "dainoheya@gmail.com"     # 送信先アドレス
 
-  def received_email(inquiry)
+  def send_mail(inquiry)
     @inquiry = inquiry
-    mail(:subject => 'お問い合わせを承りました')
+    mail(
+    from: 'NaturalGuard お問い合わせフォーム <naturalguard.help@gmail.com>',
+    to:   'dainoheya@gmail.com',
+    subject: '【重要】naturalguard.jpにお問い合わせがありました。'
+  )
   end
 
 end

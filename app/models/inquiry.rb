@@ -1,5 +1,4 @@
-class Inquiry
-  include ActiveModel::Model
+class Inquiry < ActiveRecord::Base
 
    attr_accessor :name,:kana,:email,:phone,:address,:message
 

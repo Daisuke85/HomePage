@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'home#index'
   get  '/about',   to: 'home#about'
   get  '/contact', to: 'home#contact'
-  post 'home/confirm' => 'home#confirm'   # 確認アクション
+  post '/' => 'home#confirm'   # 確認アクション
 end
