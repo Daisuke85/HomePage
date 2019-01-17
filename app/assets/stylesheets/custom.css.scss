@@ -119,19 +119,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
 }
 
-h1 {
-  font-size: 3em;
-  text-align: center;
-  margin:0;
-  //スマホサイズ
-  @media (min-width: 480px) {
-    font-size: 3.5em;
-  }
-  //PCサイズ
-  @media (min-width: 768px) {
-    font-size: 4em;
-  }
-}
 
 h2 {
   font-size: 2.5em;
@@ -224,6 +211,7 @@ color: #494f55!important;
   .intro_title{
     font-size: 3em;
     .sub_title{
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
       font-size:0.45em;
     }
     .main_title{
