@@ -30,7 +30,7 @@ textarea {
 
 img {
   width:100%;
-  margin-bottom:50px;
+  margin-bottom:15px;
 }
 
 .center {
@@ -58,6 +58,18 @@ padding: 20px 40px;
 font-weight: 700;
 }
 
+.green{
+  color:#27bb5a;
+  font-weight: 900;
+  font-size:1.1em;
+}
+
+.gray_back{
+  background-color: #f7f7f7;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .btn-primary {
 font-weight:900;
 font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
@@ -81,7 +93,7 @@ color: #27bb5a;
   color:#27bb5a;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
 	.br-sp { display:none; }
 }
 
@@ -259,13 +271,13 @@ color: #494f55!important;
 }
 //SERVISES
 section{
-  padding: 150px 0;
+  padding: 50px 0;
 
   .section-heading {
     font-weight: 900;
     font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     color:#212529;
     letter-spacing: 1px;
     .toha{
@@ -278,9 +290,9 @@ section{
   .section-subheading{
     font-size: 16px;
     font-weight: normal;
-    margin-bottom: 75px;
     text-transform: none;
     line-height: 1.7em;
+    margin-bottom:20px;
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     transform: rotate(.03deg);
     .section_text{
@@ -321,11 +333,6 @@ section{
 
 //Contact
 section#contact {
-  background-color: #f7f7f7;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top:80px;
-  padding-bottom: 50px;
   margin-bottom: 0;
   margin-top: 0;
 
